@@ -10,6 +10,10 @@ const HomeScreen = ({navigation}) => {
     navigation.navigate('Drawer');
   };
 
+  const onPressExpenses = () => {
+    navigation.navigate('ExpensesOverview');
+  };
+
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.loginBtn} onPress={onPressGN}>
@@ -17,6 +21,9 @@ const HomeScreen = ({navigation}) => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.loginBtn} onPress={onPressMeals}>
         <Text>Meals</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.loginBtn} onPress={onPressExpenses}>
+        <Text>Expenses</Text>
       </TouchableOpacity>
     </View>
   );
